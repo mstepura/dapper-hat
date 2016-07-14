@@ -44,7 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Internals\DescribeFirstResultSet.cs" />
+    <Compile Include="Internals\FieldTypeCompatibilityComparer.cs" />
+    <Compile Include="Internals\FmtOnlyConnectionContext.cs" />
+    <Compile Include="Internals\LinqExtensions.cs" />
+    <Compile Include="Internals\RecordsetFieldType.cs" />
+    <Compile Include="Internals\SqlParameterMetadataEqualityComparer.cs" />
+    <Compile Include="Internals\SqlQueryValidateExtension.cs" />
+    <Compile Include="Internals\SqlQueryValidators.cs" />
+    <Compile Include="Internals\ValidatingCommandParameters.cs" />
+    <Compile Include="Internals\ValidatingDatabaseConnection.cs" />
+    <Compile Include="Internals\ValidatingMultiQueryResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidatingDatabaseConnectionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -32,7 +32,7 @@ namespace Dapper.Hat.SqlServer
         public Task<IDatabaseConnection> Create()
         {
             var connection = new SqlConnection(_connectionString);
-            return Task.FromResult((IDatabaseConnection)new DatabaseConnection(connection, _defaultCommandTimeout));
+            return Task.FromResult<IDatabaseConnection>(new DatabaseConnection(connection, _defaultCommandTimeout));
         }
 
         IDatabaseCommandParameters IDatabaseConnectionFactory.CreateParameters()
