@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dapper.hat.sqlserver", "dapper.hat.sqlserver\dapper.hat.sqlserver.csproj", "{CD14B2B6-84C6-481A-B345-87B7A91525F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dapper.hat.sqlserver.testing", "dapper.hat.sqlserver.testing\dapper.hat.sqlserver.testing.csproj", "{A538F799-8A10-45DA-9278-A2758D23F8F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD14B2B6-84C6-481A-B345-87B7A91525F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD14B2B6-84C6-481A-B345-87B7A91525F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD14B2B6-84C6-481A-B345-87B7A91525F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD14B2B6-84C6-481A-B345-87B7A91525F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A538F799-8A10-45DA-9278-A2758D23F8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A538F799-8A10-45DA-9278-A2758D23F8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A538F799-8A10-45DA-9278-A2758D23F8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A538F799-8A10-45DA-9278-A2758D23F8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
