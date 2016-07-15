@@ -16,7 +16,7 @@ namespace Demo.DAL
             _connectionFactory = connectionFactory;
         }
 
-        async public Task<int?> GetThisSingleInteger(int input1, string input2)
+        public async Task<int?> GetThisSingleInteger(int input1, string input2)
         {
             var prm = _connectionFactory.CreateParameters();
             prm.Add(name: "@input1", value: input1, dbType: DbType.Int32);
@@ -30,7 +30,7 @@ namespace Demo.DAL
             }
         }
 
-        async public Task<IEnumerable<IComplexType>> GetComplexTypes(DateTime? dt)
+        public async Task<IEnumerable<IComplexType>> GetComplexTypes(DateTime? dt)
         {
             var prm = _connectionFactory.CreateParameters();
             prm.Add(name: "@dt", value: dt, dbType: DbType.DateTime);
@@ -43,7 +43,7 @@ namespace Demo.DAL
             }
         }
 
-        async public Task<IEnumerable<IComplexType>> GetWithTableValuedParameter(IEnumerable<int> filters)
+        public async Task<IEnumerable<IComplexType>> GetWithTableValuedParameter(IEnumerable<int> filters)
         {
             var prm = _connectionFactory.CreateParameters();
             prm.AddTable("@filters", filters.Select(i => new InternalIntegerList { Id = i }));
@@ -55,7 +55,7 @@ namespace Demo.DAL
             }
         }
 
-        async public Task<IManyDatasetResult> GetMultipleResultSets()
+        public async Task<IManyDatasetResult> GetMultipleResultSets()
         {
             using (var connection = await _connectionFactory.Create())
             using (var multiResult = await connection.MultiQuery(sql: "dbo.GetMultipleResultSets"))

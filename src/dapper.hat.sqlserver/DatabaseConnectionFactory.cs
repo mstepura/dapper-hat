@@ -29,10 +29,11 @@ namespace Dapper.Hat.SqlServer
         /// Create database connection.
         /// </summary>
         /// <returns>Task with database connection result.</returns>
-        public Task<IDatabaseConnection> Create()
+        public async Task<IDatabaseConnection> Create()
         {
             var connection = new SqlConnection(_connectionString);
-            return Task.FromResult<IDatabaseConnection>(new DatabaseConnection(connection, _defaultCommandTimeout));
+            await connection.OpenAsync().ConfigureAwait(false);
+            return new DatabaseConnection(connection, _defaultCommandTimeout);
         }
 
         IDatabaseCommandParameters IDatabaseConnectionFactory.CreateParameters()

@@ -59,7 +59,7 @@ namespace Dapper.Hat.SqlServer
 
         public void AddTable<T>(string name, IEnumerable<T> tvp) where T : class
         {
-            _nativeParameters.Add(TvpParameter.Create<T>(name, tvp, null));
+            _nativeParameters.Add(TvpParameter.Create(name, tvp, null));
         }
 
         T IDatabaseCommandParameters.Get<T>(string name)
