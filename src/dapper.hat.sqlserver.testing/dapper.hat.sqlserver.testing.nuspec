@@ -13,6 +13,7 @@
     <tags>data access integration test dapper sql dal</tags>
     <dependencies>
         <dependency id="Dapper" version="1.42" />
+        <dependency id="Dapper.Hat.SqlServer" version="$version$" />
     </dependencies>
   </metadata>
   <files>
