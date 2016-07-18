@@ -93,39 +93,21 @@ namespace Dapper.Hat.SqlServer.Testing
             if (missingFields.Any())
             {
                 exceptionText += string.Join("",
-                    missingFields.Select(prm =>
-                        string.Format(
-                            "\nMissing property {0} of type {1}",
-                            prm.Name,
-                            prm.Type)
-                        )
+                    missingFields.Select(prm => $"\nMissing property {prm.Name} of type {prm.Type}")
                     );
             }
 
             if (redundantFields.Any())
             {
                 exceptionText += string.Join("",
-                    redundantFields.Select(prm =>
-                        string.Format(
-                            "\nRedundant property {0} of type {1}",
-                            prm.Name,
-                            prm.Type
-                            )
-                        )
+                    redundantFields.Select(prm => $"\nRedundant property {prm.Name} of type {prm.Type}")
                     );
             }
 
             if (unmatchedFields.Any())
             {
                 exceptionText += string.Join("",
-                    unmatchedFields.Select(prm =>
-                        string.Format(
-                            "\nProperty {0} type mismatch: found type {1}, expected type {2}",
-                            prm.actual.Name,
-                            prm.actual.Type,
-                            prm.expected.Type
-                            )
-                        )
+                    unmatchedFields.Select(prm => $"\nProperty {prm.actual.Name} type mismatch: found type {prm.actual.Type}, expected type {prm.expected.Type}")
                     );
             }
 
@@ -233,12 +215,7 @@ namespace Dapper.Hat.SqlServer.Testing
             {
                 exceptionText += string.Join("",
                     missingParameters.Select(prm =>
-                        string.Format(
-                            "\nMissing parameter {0} of type {1}{2}",
-                            prm.ParameterName,
-                            prm.SqlDbType,
-                            prm.Size != 0 ? string.Format(" size {0}", prm.Size) : string.Empty
-                            )
+                            $"\nMissing parameter {prm.ParameterName} of type {prm.SqlDbType}" + (prm.Size != 0 ? $" size {prm.Size}" : string.Empty)
                         )
                     );
             }
@@ -247,12 +224,7 @@ namespace Dapper.Hat.SqlServer.Testing
             {
                 exceptionText += string.Join("",
                     redundantParameters.Select(prm =>
-                        string.Format(
-                            "\nRedundant parameter {0} of type {1}{2}",
-                            prm.ParameterName,
-                            prm.SqlDbType,
-                            prm.Size != 0 ? string.Format(" size {0}", prm.Size) : string.Empty
-                            )
+                            $"\nRedundant parameter {prm.ParameterName} of type {prm.SqlDbType}" + (prm.Size != 0 ? $" size {prm.Size}" : string.Empty)
                         )
                     );
             }
@@ -261,14 +233,7 @@ namespace Dapper.Hat.SqlServer.Testing
             {
                 exceptionText += string.Join("",
                     unmatchedParameters.Select(prm =>
-                        string.Format(
-                            "\nParameter mismatch {0}: found type {1} size {2}, expected type {3} size {4}",
-                            prm.actual.ParameterName,
-                            prm.actual.SqlDbType,
-                            prm.actual.Size,
-                            prm.expected.SqlDbType,
-                            prm.expected.Size
-                            )
+                            $"\nParameter mismatch {prm.actual.ParameterName}: found type {prm.actual.SqlDbType} size {prm.actual.Size}, expected type {prm.expected.SqlDbType} size {prm.expected.Size}"
                         )
                     );
             }

@@ -21,7 +21,7 @@ namespace Demo.DAL.Tests
         [Test]
         public void GetThisSingleInteger()
         {
-            var result = _sut.GetThisSingleInteger(1, "hello").Result;
+            Assert.DoesNotThrowAsync(() => _sut.GetThisSingleInteger(1, "hello"));
         }
 
         [Test]
