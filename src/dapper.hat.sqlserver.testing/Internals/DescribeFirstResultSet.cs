@@ -38,7 +38,6 @@ from sys.dm_exec_describe_first_result_set(@tsql, default, default)
                 param: recordsetCheckingParams,
                 commandType: CommandType.Text).ToList();
 
-            // if any error is returned - stop processing and blow up immediately
             if (recordsetFields.Any(field => field.error_number.HasValue))
             {
                 var errorText = string.Join("\n",
