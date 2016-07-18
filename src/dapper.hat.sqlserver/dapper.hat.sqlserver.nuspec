@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Dapper.Hat.SqlServer</id>
+    <title>Dapper.Hat.SqlServer</title>
+    <version>$version$</version>
+    <authors>Michael Stepura</authors>
+    <description>Data access layer library with integration testing capability built on dapper-dot-net.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/mstepura/dapper-hat</projectUrl>
+    <licenseUrl>https://github.com/mstepura/dapper-hat/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>data access integration test dapper sql dal</tags>
+    <dependencies>
+        <dependency id="Dapper" version="1.42" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\dapper.hat.sqlserver.dll" target="lib\net451" />
+    <file src="bin\Release\dapper.hat.sqlserver.pdb" target="lib\net451" />
+    <file src="bin\Release\dapper.hat.sqlserver.xml" target="lib\net451" />
+  </files>
+</package>
